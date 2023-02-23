@@ -8,7 +8,7 @@ class Book {
 
   render() {
     const li = document.createElement("li");
-    li.innerHTML = `"${this.title}"<br> written by ${this.author}<br><br>`;
+    li.textContent = this.title;
     return li;
   }
 }

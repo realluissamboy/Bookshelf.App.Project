@@ -44,26 +44,3 @@ nav {
   background-color: rgb(47, 36, 29);
   color: rgb(255, 196, 37);
 }
-
-.add-book-button {
-  background: none;
-  border: none;
-  color: inherit;
-  font-size: 1em;
-  cursor: pointer;
-  text-decoration: none;
-}
-
-#createBook {
-  position: fixed;
-  display: flex;
-  width: 20%;
-  margin-left: 75%;
-  padding: 10px;
-  border: solid black;
-  display: none;
-}
-
-#createBook input {
-  padding: 2px;
-}

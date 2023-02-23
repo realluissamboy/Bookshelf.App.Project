@@ -1,6 +1,6 @@
 // Initialization
 
-const app = document.querySelector("#app");
+const app = document.querySelector("#book-list");
 const bookshelf = new Bookshelf();
 
 // Load in book data
@@ -13,48 +13,21 @@ for (const bookInfo of bookData) {
   );
   bookshelf.addBook(book);
 }
+// app.append(bookshelf.render());
 
-app.append(bookshelf.render());
+const bookForm = document.querySelector("#book-form");
+const bookList = document.querySelector("#book-list");
 
-// Add new books
-
-const addNewBook = (author, language, subject, title) => {
-  const newBook = new Book(author, language, subject, title);
-  bookshelf.addBook(newBook);
-};
-
-function toggleForm() {
-  let addBookForm = document.getElementById("createBook");
-  if (addBookForm.style.display === "none") {
-    addBookForm.style.display = "block";
-  } else {
-    addBookForm.style.display = "none";
-  }
-}
-
-// Add event listener to form
-const form = document.querySelector("#createBook form");
-form.addEventListener("submit", handleFormSubmit);
-
-function handleFormSubmit(event) {
-  // Prevent form from reloading page
+bookForm.addEventListener("submit", (event) => {
   event.preventDefault();
-
-  // Retrieve form values
   const title = document.querySelector("#title").value;
   const author = document.querySelector("#author").value;
   const language = document.querySelector("#language").value;
   const subject = document.querySelector("#subject").value;
+  const book = new Book(author, language, subject, title);
+  bookshelf.addBook(book);
+  bookList.innerHTML = "";
+  bookList.append(bookshelf.render());
+});
 
-  // Create new Book object
-  const newBook = new Book(author, language, subject, title);
-
-  // Add new book to bookshelf
-  bookshelf.addBook(newBook);
-
-  // Reset form fields
-  form.reset();
-
-  // Hide form
-  document.querySelector("#createBook").style.display = "none";
-}
+bookList.append(bookshelf.render());

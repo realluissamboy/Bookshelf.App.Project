@@ -15,34 +15,33 @@
           <li><a href="#">Home</a></li>
           <li><a href="#">Login</a></li>
           <li><a href="#">Search</a></li>
-          <li>
-            <button class="add-book-button" onclick="toggleForm()">
-              Add Book
-            </button>
-          </li>
+          <li><a href="#">Add</a></li>
         </ul>
       </nav>
     </header>
 
     <main id="app">
+      <!-- Add book form -->
       <div id="createBook">
-        <form action="#" method="#">
+        <h2>Add a New Book</h2>
+        <form id="book-form">
           <label for="title">Title:</label>
-          <input type="text" id="title" name="title" />
+          <input type="text" id="title" name="title" /><br />
 
-          <label for="Author">Author(s):</label>
-          <input type="text" id="author" name="author" />
+          <label for="author">Author(s):</label>
+          <input type="text" id="author" name="author" /><br />
 
-          <label for="Language">Language:</label>
-          <input type="text" id="language" name="language" />
+          <label for="language">Language:</label>
+          <input type="text" id="language" name="language" /><br />
 
-          <label for="Subject">Subject(s):</label>
-          <input type="text" id="subject" name="subject" />
+          <label for="subject">Subject(s):</label>
+          <input type="text" id="subject" name="subject" /><br />
 
-          <input type="submit" value="Submit" class="formButtons" />
-          <input type="reset" value="Clear" class="formButtons" />
+          <button type="submit">Add Book</button>
         </form>
       </div>
+
+      <div id="book-list"></div>
     </main>
 
     <footer></footer>
