@@ -8,12 +8,12 @@ class Bookshelf {
   }
 
   render() {
-    const ul = document.createElement("ul");
+    const div = document.createElement("div");
 
     for (const book of this.books) {
-      ul.append(book.render());
+      div.append(book.render());
     }
 
-    return ul;
+    return div;
   }
 }
