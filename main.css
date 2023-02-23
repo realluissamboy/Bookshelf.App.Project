@@ -1,32 +1,69 @@
-body {
-  font: 400 18px helvetica, sans-serif;
-  color: #fafafa;
-  margin: 0;
-  padding: 50px;
-  background: #222;
-}
+/* Universal Styling */
 
-/* Just the UL styling all you need */
-nav {
-  display: flex;
-  gap: 2rem;
-}
-
-ul {
+* {
   margin: 0;
   padding: 0;
   list-style: none;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-li {
-  line-height: 1.5;
-  text-indent: -30px;
-  padding: 8px 0 8px 30px;
+html {
+  font-size: 16px;
 }
 
-li:before {
-  float: left;
-  display: block;
-  content: "\01F49B";
-  margin: 0 30px 0 0;
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Header & Navigation */
+
+header {
+  padding: 10px;
+  background-color: rgb(47, 36, 29);
+  color: rgb(255, 196, 37);
+  margin-bottom: 10px;
+}
+
+.logo {
+  font-size: 3em;
+  /* border: solid white; */
+  display: flex;
+  justify-content: center;
+}
+.nav_links li {
+  display: inline-block;
+  padding: 0px 20px;
+  font-size: 1.25em;
+}
+
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: rgb(47, 36, 29);
+  color: rgb(255, 196, 37);
+}
+
+.add-book-button {
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 1em;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+#createBook {
+  position: fixed;
+  display: flex;
+  width: 20%;
+  margin-left: 75%;
+  padding: 10px;
+  border: solid black;
+  display: none;
+}
+
+#createBook input {
+  padding: 2px;
 }

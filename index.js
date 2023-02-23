@@ -1,56 +1,60 @@
-// --------------------------
-//#region Initialization
-// --------------------------
-const bookshelfElement = document.querySelector(".books");
-const bookshelf = new Bookshelf(bookshelfElement);
-bookshelf.seed(bookData);
+// Initialization
 
-//#endregion Initialization
+const app = document.querySelector("#app");
+const bookshelf = new Bookshelf();
 
-// --------------------------
-//#region Favorite Feature
-// --------------------------
-const favCount = document.querySelector(".favCount");
-const updateBtn = document.querySelector(".favUpdateBtn");
+// Load in book data
+for (const bookInfo of bookData) {
+  const book = new Book(
+    bookInfo.author,
+    bookInfo.language,
+    bookInfo.subject,
+    bookInfo.title
+  );
+  bookshelf.addBook(book);
+}
 
-updateBtn.addEventListener("click", () => {
-  favCount.textContent = bookshelf.countFavoriteBooks();
-});
+app.append(bookshelf.render());
 
-//#endregion Favorite Feature
+// Add new books
 
-// --------------------------
-//#region Searching
-// --------------------------
-const searchInput = document.querySelector("nav input");
-const searchBtn = document.querySelector(".searchBtn");
+const addNewBook = (author, language, subject, title) => {
+  const newBook = new Book(author, language, subject, title);
+  bookshelf.addBook(newBook);
+};
 
-// NOTE: This only searches through the titles of the books!
-searchBtn.addEventListener("click", () => {
-  const query = searchInput.value.toLowerCase();
-  const searchFn = (b) => b.title.toLowerCase().includes(query);
-  bookshelf.filterVisibleBooks(searchFn);
-});
-
-//#endregion Searching
-
-// --------------------------
-//#region Sorting
-// --------------------------
-const sortBy = document.querySelector(".sortBy");
-
-// NOTE: This only sorts by the titles of the books!
-sortBy.addEventListener("change", () => {
-  const query = sortBy.value;
-  let sortFn;
-
-  if (query === "titleaz") {
-    sortFn = (a, z) => a.title.localeCompare(z.title);
-  } else if (query === "titleza") {
-    sortFn = (a, z) => z.title.localeCompare(a.title);
+function toggleForm() {
+  let addBookForm = document.getElementById("createBook");
+  if (addBookForm.style.display === "none") {
+    addBookForm.style.display = "block";
+  } else {
+    addBookForm.style.display = "none";
   }
+}
 
-  bookshelf.sortVisibleBooks(sortFn);
-});
+// Add event listener to form
+const form = document.querySelector("#createBook form");
+form.addEventListener("submit", handleFormSubmit);
 
-//#endregion Sorting
+function handleFormSubmit(event) {
+  // Prevent form from reloading page
+  event.preventDefault();
+
+  // Retrieve form values
+  const title = document.querySelector("#title").value;
+  const author = document.querySelector("#author").value;
+  const language = document.querySelector("#language").value;
+  const subject = document.querySelector("#subject").value;
+
+  // Create new Book object
+  const newBook = new Book(author, language, subject, title);
+
+  // Add new book to bookshelf
+  bookshelf.addBook(newBook);
+
+  // Reset form fields
+  form.reset();
+
+  // Hide form
+  document.querySelector("#createBook").style.display = "none";
+}

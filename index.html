@@ -4,30 +4,48 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Luis Samboy Bookshelf App</title>
+    <title>Samboy's Bookshelf App</title>
     <link rel="stylesheet" href="main.css" />
   </head>
   <body>
-    <nav>
-      <section class="search">
-        <input placeholder="Search" />
-        <button class="searchBtn">Search</button>
-      </section>
-      <section class="sort">
-        <label>Sort by</label>
-        <select class="sortBy">
-          <option value="titleaz">Title A-Z</option>
-          <option value="titleza">Title Z-A</option>
-        </select>
-      </section>
-      <section>
-        You have <span class="favCount">0</span> favorite books.
-        <button class="favUpdateBtn">Update</button>
-      </section>
-    </nav>
+    <header>
+      <div class="logo">San Diego Public Library</div>
+      <nav class="nav_links">
+        <ul class="toplinks">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Login</a></li>
+          <li><a href="#">Search</a></li>
+          <li>
+            <button class="add-book-button" onclick="toggleForm()">
+              Add Book
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
     <main id="app">
-      <ul class="books"></ul>
+      <div id="createBook">
+        <form action="#" method="#">
+          <label for="title">Title:</label>
+          <input type="text" id="title" name="title" />
+
+          <label for="Author">Author(s):</label>
+          <input type="text" id="author" name="author" />
+
+          <label for="Language">Language:</label>
+          <input type="text" id="language" name="language" />
+
+          <label for="Subject">Subject(s):</label>
+          <input type="text" id="subject" name="subject" />
+
+          <input type="submit" value="Submit" class="formButtons" />
+          <input type="reset" value="Clear" class="formButtons" />
+        </form>
+      </div>
     </main>
+
+    <footer></footer>
 
     <script src="js/book-data.js"></script>
     <script src="js/book.js"></script>
