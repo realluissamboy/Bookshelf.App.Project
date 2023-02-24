@@ -18,66 +18,81 @@ a {
 }
 
 /* Header & Navigation */
+.header {
+  height: 100px;
+  background-color: #2f241d;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border: white 1px solid;
+}
 
-header {
-  padding: 10px;
-  background-color: rgb(47, 36, 29);
-  color: rgb(255, 196, 37);
-  margin-bottom: 10px;
+.logo,
+.navigation-bar {
+  margin: 10px;
+  background-color: #ffc425;
 }
 
 .logo {
-  font-size: 3em;
-  /* border: solid white; */
-  display: flex;
-  justify-content: center;
-}
-.nav_links li {
-  display: inline-block;
-  padding: 0px 20px;
-  font-size: 1.25em;
+  height: 80px;
+  width: 100px;
+  text-align: center;
 }
 
-nav {
-  display: flex;
-  justify-content: space-evenly;
-  background-color: rgb(47, 36, 29);
-  color: rgb(255, 196, 37);
+.navigation-bar {
+  width: 500px;
+  height: fit-content;
+  flex-grow: 1;
 }
 
-#createBook {
+.navigation-bar ul {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.navigation-bar li {
+  min-width: 100px;
+}
+
+/* Main */
+.main {
+  min-height: 1215px;
+  background-color: #a2aaad;
+  display: flex;
+}
+
+/* Book Form */
+.book-form {
+  width: 15%;
+  background-color: #002d62;
+  color: white;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin: 10px 0px;
-  padding: 10px;
 }
 
-#book-form {
-  display: flex;
-  margin: 2px;
-  padding: 5px;
-}
-
-label {
-  padding: 0px 5px;
-}
-
+label,
+input[type="text"],
 .submitBtn {
-  padding: 5px;
+  font-size: 15px;
   margin-left: 5px;
 }
 
-input {
-  width: 150px;
-  height: 20px;
+h1 {
+  font-size: 30px;
+  text-align: center;
 }
 
-#book-list p {
-  padding: 5px;
-  border: black solid;
+.submitBtn {
+  background: #a2aaad;
+  border: 1px solid #eee;
+  border-radius: 20px;
+  margin-top: 10px;
+  width: 100px;
+  height: 25px;
 }
 
-img {
-  width: 200px;
+.footer {
+  height: 50px;
+  background-color: #002d62;
 }

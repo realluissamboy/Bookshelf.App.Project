@@ -10,13 +10,13 @@ class Book {
   }
 
   render() {
-    const bookcard = document.createElement("section");
+    const bookcard = document.createElement("li");
     bookcard.classList.add("bookcard");
 
     let bookcover = document.createElement("img");
     bookcover.src = this.bookcover;
 
-    let title = document.createElement("p");
+    let title = document.createElement("em");
     title.textContent = this.title;
 
     let author = document.createElement("p");
