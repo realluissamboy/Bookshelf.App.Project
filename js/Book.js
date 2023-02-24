@@ -5,7 +5,7 @@ class Book {
     this.subject = subject;
     this.title = title;
     this.bookcover =
-      bookcover || "http://clipart-library.com/images/kcKBM4E7i.png";
+      bookcover || "https://png.pngtree.com/png-clipart/20210311/original/pngtree-an-open-blue-cartoon-book-png-image_6019373.jpg";
     this.comment = [];
   }
 
@@ -20,7 +20,7 @@ class Book {
     title.textContent = this.title;
 
     let author = document.createElement("p");
-    author.textContent = this.author;
+    author.textContent = `Written by ${this.author}`;
 
     bookcard.append(bookcover, title, author);
 

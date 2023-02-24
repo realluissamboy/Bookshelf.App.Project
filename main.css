@@ -40,7 +40,6 @@ a {
 }
 
 .navigation-bar {
-  width: 500px;
   height: fit-content;
   flex-grow: 1;
 }
@@ -67,15 +66,19 @@ a {
   width: 15%;
   background-color: #002d62;
   color: white;
-  display: flex;
   flex-direction: column;
 }
 
 label,
 input[type="text"],
-.submitBtn {
+.submitBtn,
+#language,
+#coverurl {
   font-size: 15px;
   margin-left: 5px;
+  width: 174px;
+  height: 27px;
+  border-radius: 5px;
 }
 
 h1 {
@@ -92,6 +95,42 @@ h1 {
   height: 25px;
 }
 
+/* Booklist & Bookcard */
+
+#book-list section {
+  border: black solid;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.bookcard {
+  display: flex;
+  flex-direction: column;
+  height: 250px;
+  width: 300px;
+  border: blue solid;
+  margin: 25px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+img {
+  width: 95px;
+  height: 95px;
+  margin: 5px 5px;
+  border-radius: 55px;
+}
+
+em {
+  font-size: 17px;
+  margin-bottom: 5px;
+}
+
+/* Footer */
 .footer {
   height: 50px;
   background-color: #002d62;

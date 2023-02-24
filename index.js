@@ -15,7 +15,7 @@ for (const bookInfo of bookData) {
 }
 // app.append(bookshelf.render());
 
-const bookForm = document.querySelector("#book-form");
+const bookForm = document.querySelector(".book-form");
 const bookList = document.querySelector("#book-list");
 
 bookForm.addEventListener("submit", (event) => {
@@ -24,7 +24,8 @@ bookForm.addEventListener("submit", (event) => {
   const author = document.querySelector("#author").value;
   const language = document.querySelector("#language").value;
   const subject = document.querySelector("#subject").value;
-  const book = new Book(author, language, subject, title);
+  const bookcover = document.querySelector("#coverurl").value;
+  const book = new Book(author, language, subject, title, bookcover);
   bookshelf.addBook(book);
   bookList.innerHTML = "";
   bookList.append(bookshelf.render());
