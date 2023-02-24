@@ -5,7 +5,7 @@
   padding: 0;
   list-style: none;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 html {
@@ -20,23 +20,24 @@ a {
 /* Header & Navigation */
 .header {
   height: 100px;
-  background-color: #2f241d;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  border: white 1px solid;
 }
 
 .logo,
 .navigation-bar {
   margin: 10px;
-  background-color: #ffc425;
+  font-size: auto;
+  border: #ffc20e ridge 2px;
+  border-radius: 50px;
 }
 
 .logo {
   height: 80px;
-  width: 100px;
   text-align: center;
+  width: 175px;
+  padding: 15px;
 }
 
 .navigation-bar {
@@ -46,7 +47,7 @@ a {
 
 .navigation-bar ul {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   text-align: center;
 }
 
@@ -57,16 +58,16 @@ a {
 /* Main */
 .main {
   min-height: 1215px;
-  background-color: #a2aaad;
   display: flex;
 }
 
 /* Book Form */
 .book-form {
   width: 15%;
-  background-color: #002d62;
-  color: white;
   flex-direction: column;
+  border: black solid;
+  padding: 5px 5px 5px 0px;
+  margin: 2px;
 }
 
 label,
@@ -82,23 +83,25 @@ input[type="text"],
 }
 
 h1 {
-  font-size: 30px;
+  font-size: 20px;
   text-align: center;
+  margin: 0 0 20px;
 }
 
 .submitBtn {
-  background: #a2aaad;
-  border: 1px solid #eee;
   border-radius: 20px;
   margin-top: 10px;
   width: 100px;
   height: 25px;
 }
 
+/* .submitBtn:active {
+  box-shadow: 1px 2px #666;
+} */
+
 /* Booklist & Bookcard */
 
 #book-list section {
-  border: black solid;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -110,11 +113,10 @@ h1 {
   flex-direction: column;
   height: 250px;
   width: 300px;
-  border: blue solid;
   margin: 25px;
   text-align: center;
   align-items: center;
-  justify-content: center;
+  justify-content: baseline;
   border-radius: 5px;
 }
 
