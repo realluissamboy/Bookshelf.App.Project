@@ -108,19 +108,35 @@ h1 {
   justify-content: space-evenly;
 }
 
+#book-list section p {
+  margin: 16px 4px;
+}
+
 .bookcard {
   display: flex;
   flex-direction: column;
-  height: 350px;
+  align-items: center;
+  text-align: center;
+  height: 450px;
   width: 300px;
   margin: 25px;
-  text-align: center;
-  align-items: center;
-  justify-content: baseline;
+  padding: 5px;
   border: blue solid;
   overflow: hidden;
   text-overflow: ellipsis;
-  padding: 5px;
+}
+
+.bookcard textarea {
+  width: 276px;
+  margin: 10px;
+  padding: 5px 5px;
+}
+
+.commentBooks {
+  list-style-type: square;
+  margin: 4px 0px;
+  font-size: 12px;
+  font-style: italic;
 }
 
 img {
@@ -128,11 +144,6 @@ img {
   height: 95px;
   margin: 5px 5px;
   border-radius: 55px;
-}
-
-em {
-  font-size: 17px;
-  margin-bottom: 5px;
 }
 
 /* Footer */

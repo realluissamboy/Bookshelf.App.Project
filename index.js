@@ -27,7 +27,6 @@ bookForm.addEventListener("submit", (event) => {
   const bookcover = document.querySelector("#coverurl").value;
   const book = new Book(author, language, subject, title, bookcover);
   bookshelf.addBook(book);
-  bookList.innerHTML = "";
   bookList.append(bookshelf.render());
 });
 

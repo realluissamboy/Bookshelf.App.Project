@@ -21,7 +21,7 @@ class Book {
     title.textContent = this.title;
 
     let author = document.createElement("p");
-    author.textContent = `Written by ${this.author}`;
+    author.textContent = `Written by \n ${this.author}`;
 
     let commentForm = document.createElement("form");
     commentForm.setAttribute("action", "#");
@@ -37,7 +37,22 @@ class Book {
     submitButton.textContent = "Submit";
     commentForm.appendChild(submitButton);
 
-    bookcard.append(bookcover, title, author, commentForm);
+    const commentsList = document.createElement("ul");
+    commentsList.style.marginTop = "10px";
+
+    commentForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      const commentText = commentField.value;
+      const commentListItem = document.createElement("li");
+      commentListItem.textContent = commentText;
+      commentListItem.classList.add("commentBooks");
+      commentsList.appendChild(commentListItem);
+
+      commentField.value = "";
+    });
+
+    bookcard.append(bookcover, title, author, commentForm, commentsList);
 
     return bookcard;
   }
