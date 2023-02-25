@@ -14,25 +14,36 @@ class Book {
     const bookcard = document.createElement("li");
     bookcard.classList.add("bookcard");
 
-    let bookcover = document.createElement("img");
+    const bookcover = document.createElement("img");
     bookcover.src = this.bookcover;
 
-    let title = document.createElement("em");
+    const title = document.createElement("em");
     title.textContent = this.title;
 
-    let author = document.createElement("p");
+    const author = document.createElement("p");
     author.textContent = `Written by \n ${this.author}`;
 
-    let commentForm = document.createElement("form");
+    const commentButton = document.createElement("button");
+    commentButton.setAttribute("type", "button");
+    commentButton.textContent = "Leave a comment";
+
+    // Comment Form Region
+
+    const commentForm = document.createElement("form");
     commentForm.setAttribute("action", "#");
     commentForm.setAttribute("method", "POST");
+    commentForm.style.display = "none";
 
-    let commentField = document.createElement("textarea");
+    const commentField = document.createElement("textarea");
     commentField.setAttribute("name", "review");
-    commentField.setAttribute("placeholder", "Leave a review...");
+    commentField.setAttribute(
+      "placeholder",
+      "What did you like about the book?"
+    );
+    commentField.maxLength = 280;
     commentForm.appendChild(commentField);
 
-    let submitButton = document.createElement("button");
+    const submitButton = document.createElement("button");
     submitButton.setAttribute("type", "submit");
     submitButton.textContent = "Submit";
     commentForm.appendChild(submitButton);
@@ -46,13 +57,48 @@ class Book {
       const commentText = commentField.value;
       const commentListItem = document.createElement("li");
       commentListItem.textContent = commentText;
+      commentListItem.maxLength = 280;
       commentListItem.classList.add("commentBooks");
       commentsList.appendChild(commentListItem);
 
       commentField.value = "";
     });
 
-    bookcard.append(bookcover, title, author, commentForm, commentsList);
+    commentField.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" && !event.shiftKey) {
+        event.preventDefault();
+
+        const commentText = commentField.value;
+        const commentListItem = document.createElement("li");
+        commentListItem.textContent = commentText;
+        commentListItem.maxLength = 280;
+        commentListItem.classList.add("commentBooks");
+        commentsList.appendChild(commentListItem);
+
+        commentField.value = "";
+      }
+    });
+
+    commentButton.addEventListener("click", () => {
+      if (commentForm.style.display === "none") {
+        commentForm.style.display = "block";
+        commentButton.textContent = "Cancel";
+      } else {
+        commentForm.style.display = "none";
+        commentButton.textContent = "Comment?";
+      }
+    });
+
+    // End Comment Form Region
+
+    bookcard.append(
+      bookcover,
+      title,
+      author,
+      commentButton,
+      commentForm,
+      commentsList
+    );
 
     return bookcard;
   }

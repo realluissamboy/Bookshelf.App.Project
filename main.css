@@ -1,9 +1,6 @@
 /* Universal Styling */
 
 * {
-  margin: 0;
-  padding: 0;
-  list-style: none;
   box-sizing: border-box;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -12,88 +9,80 @@ html {
   font-size: 16px;
 }
 
-a {
+/* Header & Navigation */
+.header {
+  border: yellow solid;
+  display: flex;
+  margin: 10px;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: space-around;
+}
+
+.logo {
+  border: dashed green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.navigation-bar {
+  border: dashed blue;
+  flex-grow: 2;
+}
+
+.navigation-bar ul {
+  border: dashed hotpink;
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.navigation-bar a {
   text-decoration: none;
   color: inherit;
 }
 
-/* Header & Navigation */
-.header {
-  height: 100px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-}
-
-.logo,
-.navigation-bar {
-  margin: 10px;
-  font-size: auto;
-  border: #ffc20e ridge 2px;
-  border-radius: 50px;
-}
-
-.logo {
-  height: 80px;
-  text-align: center;
-  width: 175px;
-  padding: 15px;
-}
-
-.navigation-bar {
-  height: fit-content;
-  flex-grow: 1;
-}
-
-.navigation-bar ul {
-  display: flex;
-  justify-content: space-around;
-  text-align: center;
-}
-
-.navigation-bar li {
-  min-width: 100px;
-}
-
 /* Main */
-.main {
+/* .main {
   min-height: 1215px;
   display: flex;
-}
+  border: dotted orange;
+} */
 
 /* Book Form */
 .book-form {
-  width: 15%;
-  flex-direction: column;
-  border: black solid;
-  padding: 5px 5px 5px 0px;
-  margin: 2px;
+  border: indigo dashed;
 }
 
-label,
+/* label,
 input[type="text"],
 .submitBtn,
 #language,
 #coverurl {
+  display: flex;
   font-size: 15px;
   margin-left: 5px;
   width: 174px;
   height: 27px;
   border-radius: 5px;
-}
+  max-width: 90%;
+} */
 
-h1 {
+/* h1 {
   font-size: 20px;
   text-align: center;
   margin: 0 0 20px;
-}
+} */
 
-.submitBtn {
+/* .submitBtn {
   border-radius: 20px;
   margin-top: 10px;
   width: 100px;
   height: 25px;
-}
+} */
 
 /* .submitBtn:active {
   box-shadow: 1px 2px #666;
@@ -102,6 +91,7 @@ h1 {
 /* Booklist & Bookcard */
 
 #book-list section {
+  border: turquoise dotted;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
