@@ -2,7 +2,7 @@
 
 * {
   box-sizing: border-box;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 html {
@@ -44,49 +44,6 @@ html {
   text-decoration: none;
   color: inherit;
 }
-
-/* Main */
-/* .main {
-  min-height: 1215px;
-  display: flex;
-  border: dotted orange;
-} */
-
-/* Book Form */
-.book-form {
-  border: indigo dashed;
-}
-
-/* label,
-input[type="text"],
-.submitBtn,
-#language,
-#coverurl {
-  display: flex;
-  font-size: 15px;
-  margin-left: 5px;
-  width: 174px;
-  height: 27px;
-  border-radius: 5px;
-  max-width: 90%;
-} */
-
-/* h1 {
-  font-size: 20px;
-  text-align: center;
-  margin: 0 0 20px;
-} */
-
-/* .submitBtn {
-  border-radius: 20px;
-  margin-top: 10px;
-  width: 100px;
-  height: 25px;
-} */
-
-/* .submitBtn:active {
-  box-shadow: 1px 2px #666;
-} */
 
 /* Booklist & Bookcard */
 
@@ -134,6 +91,58 @@ img {
   height: 95px;
   margin: 5px 5px;
   border-radius: 55px;
+}
+
+.add-book-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 40%;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  position: relative;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+
+label {
+  margin-bottom: 2px;
+  text-align: center;
+}
+
+#title,
+#author,
+#language,
+#language select,
+#subject,
+#coverurl {
+  margin: 15px 2px 5px 2px;
+}
+
+input {
+  font-size: 15px;
 }
 
 /* Footer */

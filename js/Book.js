@@ -85,7 +85,7 @@ class Book {
         commentButton.textContent = "Cancel";
       } else {
         commentForm.style.display = "none";
-        commentButton.textContent = "Comment?";
+        commentButton.textContent = "Thoughts?";
       }
     });
 
