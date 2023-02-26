@@ -10,29 +10,42 @@ html {
 }
 
 /* Header & Navigation */
-/* Background colors generated with the help of colorgradient.dev */
+/* Background colors generated with the help of cssgradient.io */
+/* Font style generated with the help of html-css-js.com*/
 .header {
-  background-size: 100% 100%;
-  background-position: 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
-  background-image: repeating-linear-gradient(
-      315deg,
-      #00ffff2e 92%,
-      #073aff00 100%
-    ),
-    repeating-radial-gradient(
-      75% 75% at 238% 218%,
-      #00ffff12 30%,
-      #073aff14 39%
-    ),
-    radial-gradient(99% 99% at 109% 2%, #00c9ffff 0%, #073aff00 100%),
-    radial-gradient(99% 99% at 21% 78%, #7b00ffff 0%, #073aff00 100%),
-    radial-gradient(160% 154% at 711px -303px, #2000ffff 0%, #073affff 100%);
+  background: rgb(255, 197, 37);
+  background: radial-gradient(
+    circle,
+    rgba(255, 197, 37, 1) 0%,
+    rgba(255, 255, 255, 1) 35%,
+    rgba(255, 255, 255, 1) 100%
+  );
   display: flex;
   margin: 10px;
   flex-wrap: wrap;
   text-align: center;
   justify-content: space-around;
-  font-size: 32px;
+  /* Font Style */
+  font-size: 25px;
+  letter-spacing: 1.8px;
+  word-spacing: -0.4px;
+  color: #000000;
+  font-weight: 700;
+  text-decoration: none;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: uppercase;
+  /* Shadow*/
+  -webkit-box-shadow: 2px 2px 32px 17px rgba(99, 97, 96, 1);
+  -moz-box-shadow: 2px 2px 32px 17px rgba(99, 97, 96, 1);
+  box-shadow: 2px 2px 32px 17px rgba(99, 97, 96, 1);
+  /* Border */
+  border-radius: 154px 154px 154px 154px;
+  -moz-border-radius: 154px 154px 154px 154px;
+  -webkit-border-radius: 154px 154px 154px 154px;
+  /*Text */
+  text-shadow: 2px 8px 6px rgba(0, 0, 0, 0.2),
+    0px -5px 35px rgba(255, 255, 255, 0.3);
 }
 
 .logo {
@@ -53,10 +66,9 @@ html {
   flex-wrap: wrap;
 }
 
-.logo,
 .navigation-bar a {
+  -webkit-text-fill-color: #000;
   text-decoration: none;
-  -webkit-text-fill-color: #fff;
 }
 
 /* Booklist & Bookcard */
@@ -68,7 +80,7 @@ html {
   justify-content: center;
 }
 
-/* Shadow generated with the help of cssmatic.com */
+/* Shadow and background image generated with the help of cssmatic.com */
 .bookcard {
   display: flex;
   flex-direction: column;
@@ -76,22 +88,65 @@ html {
   text-align: center;
   height: 450px;
   width: 300px;
-  /* margin: 25px; */
   padding: 5px;
   overflow: hidden;
   text-overflow: ellipsis;
   margin: 10px;
-  -webkit-box-shadow: 6px 6px 25px 4px rgba(183, 178, 171, 1);
-  -moz-box-shadow: 6px 6px 25px 4px rgba(183, 178, 171, 1);
-  box-shadow: 6px 6px 25px 4px rgba(183, 178, 171, 1);
-  background-size: 100% 100%;
-  background-position: 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
-  background-image: radial-gradient(
-      142% 91% at 83% 7%,
-      #cce2ffff 1%,
-      #4141d600 99%
-    ),
-    radial-gradient(142% 91% at 111% 84%, #f6f1eeff 0%, #b9ccfbff 100%);
+  border: #002d62 solid;
+  /* Background image */
+  background: rgba(242, 246, 248, 1);
+  background: -moz-linear-gradient(
+    left,
+    rgba(242, 246, 248, 1) 0%,
+    rgba(216, 225, 231, 1) 7%,
+    rgba(224, 239, 249, 1) 100%
+  );
+  background: -webkit-gradient(
+    left top,
+    right top,
+    color-stop(0%, rgba(242, 246, 248, 1)),
+    color-stop(7%, rgba(216, 225, 231, 1)),
+    color-stop(100%, rgba(224, 239, 249, 1))
+  );
+  background: -webkit-linear-gradient(
+    left,
+    rgba(242, 246, 248, 1) 0%,
+    rgba(216, 225, 231, 1) 7%,
+    rgba(224, 239, 249, 1) 100%
+  );
+  background: -o-linear-gradient(
+    left,
+    rgba(242, 246, 248, 1) 0%,
+    rgba(216, 225, 231, 1) 7%,
+    rgba(224, 239, 249, 1) 100%
+  );
+  background: -ms-linear-gradient(
+    left,
+    rgba(242, 246, 248, 1) 0%,
+    rgba(216, 225, 231, 1) 7%,
+    rgba(224, 239, 249, 1) 100%
+  );
+  background: linear-gradient(
+    to right,
+    rgba(242, 246, 248, 1) 0%,
+    rgba(216, 225, 231, 1) 7%,
+    rgba(224, 239, 249, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f6f8', endColorstr='#e0eff9', GradientType=1 );
+  /* Shadow
+  -webkit-box-shadow: -2px 5px 64px -15px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -2px 5px 64px -15px rgba(0, 0, 0, 0.75);
+  box-shadow: -2px 5px 64px -15px rgba(0, 0, 0, 0.75); */
+  /* Transition */
+  transition: box-shadow 0.2s ease-out;
+  text-shadow: 2px 8px 6px rgba(0, 0, 0, 0.2),
+    0px -5px 35px rgba(255, 255, 255, 0.3);
+}
+
+.bookcard:hover {
+  -webkit-box-shadow: 2px 2px 32px 17px rgba(99, 97, 96, 1);
+  -moz-box-shadow: 2px 2px 32px 17px rgba(99, 97, 96, 1);
+  box-shadow: 2px 2px 32px 17px rgba(99, 97, 96, 1);
 }
 
 em {
@@ -103,12 +158,21 @@ em {
   text-overflow: ellipsis;
 }
 
+/* Comment Textarea */
 .bookcard textarea {
+  font-size: 20px;
   width: 276px;
   margin: 10px;
   padding: 5px 5px;
+  resize: none;
+  box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.2);
 }
 
+.bookcard button {
+  font-size: 15px;
+  color: #333333;
+  background: #ffffff;
+}
 .commentBooks {
   list-style-type: square;
   margin: 4px 0px;
@@ -121,14 +185,31 @@ img {
   height: 95px;
   margin: 5px 5px;
   border-radius: 55px;
+  -webkit-box-shadow: -1px 4px 14px 2px #000000;
+  box-shadow: -1px 4px 14px 2px #000000;
 }
 
+/* Add Book Form */
 .add-book-button {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  border-radius: 25%;
-  font-size: 20px;
+  bottom: 30px;
+  right: 50px;
+  font-size: 30px;
+  border-radius: 200px 200px 200px 200px;
+  -moz-border-radius: 200px 200px 200px 200px;
+  -webkit-border-radius: 200px 200px 200px 200px;
+  border: 2px solid #000000;
+  background-color: #f00909;
+  color: white;
+  -webkit-box-shadow: 12px 9px 36px 7px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 12px 9px 36px 7px rgba(0, 0, 0, 0.75);
+  box-shadow: 12px 9px 36px 7px rgba(0, 0, 0, 0.75);
+}
+
+.add-book-button:active {
+  -webkit-box-shadow: -2px 6px 18px 22px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -2px 6px 18px 22px rgba(0, 0, 0, 0.75);
+  box-shadow: -2px 6px 18px 22px rgba(0, 0, 0, 0.75);
 }
 
 .popup {
@@ -155,6 +236,39 @@ img {
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
+  background-color: #8bc6ec;
+  background-image: linear-gradient(135deg, #8bc6ec 0%, #9599e2 100%);
+  font-size: 20px;
+  border-radius: 15px;
+  -webkit-box-shadow: 2px 2px 32px 17px rgba(99, 97, 96, 1);
+  -moz-box-shadow: 2px 2px 32px 17px rgba(99, 97, 96, 1);
+  box-shadow: 2px 2px 32px 17px rgba(99, 97, 96, 1);
+}
+
+.form-container button {
+  font-size: 25px;
+  font-weight: bolder;
+  margin: 1px;
+  border-radius: 149px 149px 149px 149px;
+  -moz-border-radius: 149px 149px 149px 149px;
+  -webkit-border-radius: 149px 149px 149px 149px;
+  border: 0px solid #000000;
+  width: 100px;
+  -webkit-box-shadow: -1px 3px 15px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px 3px 15px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: -1px 3px 15px 0px rgba(0, 0, 0, 0.75);
+  margin: 5px;
+}
+
+.button-classes {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-container button:active {
+  -webkit-box-shadow: -1px -14px 36px 26px rgba(245, 228, 245, 1);
+  -moz-box-shadow: -1px -14px 36px 26px rgba(245, 228, 245, 1);
+  box-shadow: -1px -14px 36px 26px rgba(245, 228, 245, 1);
 }
 
 label {
@@ -169,10 +283,18 @@ label {
 #subject,
 #coverurl {
   margin: 15px 2px 5px 2px;
+  border-radius: 15px;
+  width: 450px;
+  height: 50px;
+  -webkit-box-shadow: inset 2px 3px 12px 1px #000000;
+  box-shadow: inset 2px 3px 12px 1px #000000;
 }
 
-input {
-  font-size: 15px;
+input,
+select {
+  font-size: 25px;
+  font-weight: bold;
+  padding-left: 15px;
 }
 
 /* Footer */

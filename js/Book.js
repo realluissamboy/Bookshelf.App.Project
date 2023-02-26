@@ -25,7 +25,7 @@ class Book {
 
     const commentButton = document.createElement("button");
     commentButton.setAttribute("type", "button");
-    commentButton.textContent = "Leave a comment";
+    commentButton.textContent = "Comment?";
 
     // Comment Form Region
 
